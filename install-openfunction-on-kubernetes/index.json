@@ -1,0 +1,36 @@
+{
+    "title": "Install OpenFunction on kubernetes",
+    "description": "Install OpenFunction on existing Kubernetes cluster using ks-installer",
+    "difficulty": "beginner",
+    "time": "60",
+    "details": {
+      "steps": [
+        {
+          "title": "Step-1 verify Prerequisites",
+          "text": "step1.md"
+        },
+        {
+          "title": "Step-2 Deploy OpenFunction",
+          "text": "step2.md"
+        }
+      ],
+      "intro": {
+        "text": "intro.md",
+        "code": "assets/foreground.sh"
+      },
+      "finish": {
+        "text": "finish.md"
+      },
+        "assets": {
+          "host01": [
+              {"file": "launch.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+          ]
+      }
+    },
+     "environment": {
+        "uilayout": "terminal"
+      },
+    "backend": {
+      "imageid": "kubernetes-cluster-running:1.18"
+    }
+  }
