@@ -3,7 +3,7 @@
       {
         "title": "Install OpenFunction on kubernetes",
         "description": "Install OpenFunction on existing Kubernetes cluster",
-        "id": "Install-OpenFunction-on-kubernetes"
+        "id": "install-openfunction-on-kubernetes"
       }
     ]
 }
