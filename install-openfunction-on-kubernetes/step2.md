@@ -24,6 +24,3 @@ kubectl get pods --namespace openfunction
 NAME                                               READY   STATUS    RESTARTS   AGE
 openfunction-controller-manager-6955498c9b-hjql7   2/2     Running   0         2m2s
 ```
-
-
-intall nginx issue: https://github.com/kubernetes/ingress-nginx/issues/7810
