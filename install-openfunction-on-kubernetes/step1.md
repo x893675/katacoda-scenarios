@@ -1,10 +1,11 @@
-### Prerequisites
+### Kubernetes Cluster
 
-The latest version of OpenFunction requires that you have a Kubernetes cluster with version ``>=1.19.0``.
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify that it's ready for your use:
+```
+kubectl version --short && \
+kubectl get nodes && \
+kubectl get componentstatus && \
+kubectl cluster-info
+```{{execute}}
 
-1.Make sure your Kubernetes version is compatible by running `kubectl version`{{execute}} in your cluster node.
-> Pay attention to Server Version line, if GitVersion is greater than v1.19.0, it's good to go
-
-2.Untaint master node: `kubectl taint node controlplane node-role.kubernetes.io/master-`{{execute}}
-
-3.Setup OpenFunction **Builder** and **Serving**: `curl -sfL https://raw.githubusercontent.com/OpenFunction/OpenFunction/main/hack/deploy.sh | bash -s  -- --with-cert-manager --with-shipwright --with-openFuncAsync`{{execute}}
+It should list a 2-node cluster and the control plane components should be reporting Healthy. If it's not healthy, try again in a few moments. If it's still not functioning refresh the browser tab to start a fresh scenario instance before proceeding.
