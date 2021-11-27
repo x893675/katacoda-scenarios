@@ -1,1 +1,1 @@
-launch.sh
+/usr/local/bin/launch.sh
