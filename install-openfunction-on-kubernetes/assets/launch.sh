@@ -18,10 +18,12 @@ wait_for_nodeready() {
     return 1
   fi
   echo "Wating for Kubernetes node $1 to ready..."
-  status=$(kubectl get node ${1} | sed '1d' | awk '{print $2}')
+  cmd = "kubectl get node ${1} | sed '1d' | awk '{print $2}'"
+  status=$cmd
   while [ ${status} != "Ready" ]
   do
     sleep 5
+    status=$cmd
   done
   echo "Node ${1} status is now: NodeReady"
 }
